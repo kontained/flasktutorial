@@ -45,7 +45,12 @@ def register():
         )
 
         db.session.add(user)
-        db.session.commit()
+
+        try:
+            db.session.commit()
+        except Exception:
+            flash(f'Something went wrong with account creation!', 'danger')
+            return redirect(url_for('home'))
 
         flash(f'Your account has been created! You are now able to log in.', 'success')
 
