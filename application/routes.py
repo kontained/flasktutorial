@@ -1,5 +1,5 @@
 from flask import render_template, url_for, flash, redirect
-from application import app
+from application import application
 from application.forms import RegistrationForm, LoginForm
 
 
@@ -19,18 +19,18 @@ posts = [
 ]
 
 
-@app.route('/')
-@app.route('/home')
+@application.route('/')
+@application.route('/home')
 def home():
     return render_template('home.html', posts=posts)
 
 
-@app.route('/about')
+@application.route('/about')
 def about():
     return render_template('about.html', title='About')
 
 
-@app.route('/register', methods=['GET', 'POST'])
+@application.route('/register', methods=['GET', 'POST'])
 def register():
     form = RegistrationForm()
 
@@ -41,7 +41,7 @@ def register():
     return render_template('register.html', title='Register', form=form)
 
 
-@app.route('/login', methods=['GET', 'POST'])
+@application.route('/login', methods=['GET', 'POST'])
 def login():
     form = LoginForm()
 
