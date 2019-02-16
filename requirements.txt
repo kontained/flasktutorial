@@ -35,6 +35,7 @@ pathspec==0.5.5
 pycodestyle==2.4.0
 pycparser==2.19
 pylint==2.2.2
+PyMySQL==0.9.3
 python-dateutil==2.8.0
 PyYAML==3.13
 requests==2.20.1
