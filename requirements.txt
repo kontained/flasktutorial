@@ -37,7 +37,7 @@ pycparser==2.19
 pylint==2.2.2
 PyMySQL==0.9.3
 python-dateutil==2.8.0
-PyYAML==3.13
+PyYAML==5.4
 requests==2.20.1
 semantic-version==2.5.0
 six==1.11.0
